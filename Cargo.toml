@@ -1,6 +1,5 @@
 [workspace]
 members = [
-    "tasks/a123233",
     "main",
     "algo_lib",
 ]
