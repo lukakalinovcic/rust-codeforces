@@ -3,4 +3,5 @@
 
 pub mod io;
 pub mod misc;
+pub mod modulo;
 pub mod segtree;
