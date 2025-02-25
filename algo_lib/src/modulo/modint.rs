@@ -98,7 +98,7 @@ impl<const M: u32> core::ops::Div for ModInt<M> {
 }
 
 impl<const M: u32> ModInt<M> {
-    pub fn power(&self, n: u32) -> Self {
+    pub fn power(&self, n: u64) -> Self {
         Self {
             x: power::<M>(self.x, n),
         }

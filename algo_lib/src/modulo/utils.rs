@@ -14,7 +14,7 @@ pub fn div<const M: u32>(a: u32, b: u32) -> u32 {
     mul::<M>(a, inverse::<M>(b))
 }
 
-pub fn power<const M: u32>(mut x: u32, mut n: u32) -> u32 {
+pub fn power<const M: u32>(mut x: u32, mut n: u64) -> u32 {
     let mut p = 1;
     while n > 1 {
         if n & 1 == 1 {
@@ -31,7 +31,7 @@ pub fn power<const M: u32>(mut x: u32, mut n: u32) -> u32 {
 }
 
 pub fn inverse<const M: u32>(x: u32) -> u32 {
-    power::<M>(x, M - 2)
+    power::<M>(x, (M - 2) as u64)
 }
 
 pub fn gen_inverses<const M: u32>(n: usize) -> Vec<u32> {
